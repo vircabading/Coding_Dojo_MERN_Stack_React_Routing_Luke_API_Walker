@@ -9,3 +9,5 @@ Language used: Javascript, HTML, CSS
 Libary used: React
 
 Scripts used: npm, create-react-app, react-router-dom@5
+
+Platform used: Visual Studio Code
