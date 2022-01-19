@@ -14,7 +14,7 @@ const Main = () => {
                 <div className='row bg-dark p-3 rounded'>
                     <div className="col">
                         {/* **** SHOW PERSON ************* */}
-                        <Route path="/person">
+                        <Route path="/person/:id">
                             <ShowPerson />
                         </Route>
                         {/* **** HOME ROUTE ************** */}

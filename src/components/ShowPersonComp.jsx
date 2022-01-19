@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
+
 
 /**
  * //// SHOW PERSON COMPONENT ////////////////////////////////////////////////////
@@ -8,12 +10,34 @@ import axios from 'axios';
 const ShowPerson = () => {
     // //// FIELDS ///////////////////////////////////////////////////////////////
     const [person, setperson] = useState({});
+    const { id } = useParams();
+
+    useEffect(() => {
+        axios.get('https://swapi.dev/api/people/' + id)
+            .then(response => {
+                console.log("Response data:", JSON.stringify(response.data));
+                setperson(response.data);
+            })
+            .catch(error => {
+                console.log("ERROR FOUND")
+                
+            }
+
+            );
+    } ,[]);
 
     // //// OUTPUT ///////////////////////////////////////////////////////////////
     return (
         <div >
-            <h1>Show Person Component</h1>
+            <h1>{ person.name }</h1>
             <p>Person: { JSON.stringify(person) }</p>
+            <hr></hr>
+            <p>Height: {person.height}</p>
+            <p>Mass: { person.mass }</p>
+            <p>Hair Color: { person.hair_color }</p>
+            <p>Eye Color: { person.eye_color }</p>
+            <p>Home Planet: { person.homeworld }</p>
+
         </div>
     );
 };
