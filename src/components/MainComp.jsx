@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 
 import Home from './HomeComp';
+import ShowPerson from './ShowPersonComp';
 
 /**
  * //// MAIN COMPONENT //////////////////////////////////////
@@ -12,6 +13,10 @@ const Main = () => {
             <div className='container mt-4'>
                 <div className='row bg-dark p-3 rounded'>
                     <div className="col">
+                        {/* **** SHOW PERSON ************* */}
+                        <Route path="/person">
+                            <ShowPerson />
+                        </Route>
                         {/* **** HOME ROUTE ************** */}
                         <Route exact path="/">
                             <Home />
