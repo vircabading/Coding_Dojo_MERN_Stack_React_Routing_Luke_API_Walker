@@ -7,3 +7,5 @@ Program Origin: Coding Dojo > MERN Stack > React > Routing
 Language used: Javascript, HTML, CSS
 
 Libary used: React
+
+Scripts used: npm, create-react-app, react-router-dom@5
