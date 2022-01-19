@@ -5,3 +5,5 @@ Functionality: App that is able to take Input then Submits to Query Star Wars AP
 Program Origin: Coding Dojo > MERN Stack > React > Routing
 
 Language used: Javascript, HTML, CSS
+
+Libary used: React
