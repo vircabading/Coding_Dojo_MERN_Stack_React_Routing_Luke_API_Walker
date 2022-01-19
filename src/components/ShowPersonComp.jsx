@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -11,6 +11,7 @@ const ShowPerson = () => {
     // //// FIELDS ///////////////////////////////////////////////////////////////
     const [person, setperson] = useState({});
     const { id } = useParams();
+    const history = useHistory();
 
     useEffect(() => {
         axios.get('https://swapi.dev/api/people/' + id)
@@ -20,7 +21,7 @@ const ShowPerson = () => {
             })
             .catch(error => {
                 console.log("ERROR FOUND")
-                
+                history.push("/error");
             }
 
             );
