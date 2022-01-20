@@ -19,17 +19,13 @@ const ShowPerson = () => {
      */
     useEffect(() => {
         axios.get('https://swapi.dev/api/people/' + id)
-            // **** Upon successful query for a person, handle the JSON ********
             .then(response => {
                 console.log("Response Person data:", JSON.stringify(response.data));
-                // **** Memorize the retrived peson object from swapi ********
                 setperson(response.data);
                 // **** Query swapi to get the home planet of the person retrieved from swapi ********
                 axios.get(response.data.homeworld)
-                    // **** Upon successful query for a planet, handle the JSON
                     .then(response => {
                         console.log("Response homeworld data:", JSON.stringify(response.data));
-                        // **** Memorize the planet retrieved from swapi ********
                         setPlanet(response.data);
                     })
                     // **** Catch An Error if Planet Query is unsuccessful ****
