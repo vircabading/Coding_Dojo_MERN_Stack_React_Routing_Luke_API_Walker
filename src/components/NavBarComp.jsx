@@ -6,17 +6,17 @@ import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
  * @returns HTML for a Navigation Bar
  */
 const NavBar = () => {
+    // //// OUTPUT /////////////////////////////////////////////
     return (
         <header>
+            {/* **** Navigation Bar ******** */}
             <div className='navbar navbar-dark bg-dark box-shadow'>
                 <div className='container d-flex justify-content-between'>
-                    <div className='text-warning'>
-                        <h2>
-                            <strong>Luke API Walker ✨</strong>
-                        </h2>
-                    </div>
+                    {/* **** Site Title ******** */}
+                    <h2 className='text-warning'><strong>Luke API Walker ✨</strong></h2>
+                    {/* **** Link to The Root of the Site ******** */}
                     <Link to="/">
-                        <button className='btn btn-secondary round'><strong>Root</strong></button>
+                        <button className='btn btn-secondary round'><strong>Home</strong></button>
                     </Link>
                 </div>
             </div>

@@ -5,6 +5,7 @@ import React from 'react';
  * @returns HTML for the Home Welcome Greeting
  */
 const Home = () => {
+  // //// OUTPUT /////////////////////////////////////////////////
   return (
     <div>
         <h1>Welcome to the Luke API Walker</h1>

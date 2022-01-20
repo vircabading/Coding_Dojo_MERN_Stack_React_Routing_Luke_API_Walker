@@ -28,7 +28,7 @@ const InputComp = () => {
     // //// OUTPUT //////////////////////////////////////////////////
     return (
         <div>
-            <h1>Enter a query to Star Wars API 💫:</h1>
+            <h3>Enter a query to Star Wars API 💫:</h3>
             {/* **** FORM *************************************** */}
             <form className="row p-3" onSubmit={e => handleSubmit(e)}>
                 {/* **** Select type Input for Category of Query to SW API ******** */}
@@ -37,11 +37,11 @@ const InputComp = () => {
                     <option key="2" value="planet">Planet</option>
                 </select>
                 {/* **** Input for ID of Query to SW API ******** */}
-                <input className="col-md-9 rounded-left border-0" type="text"
+                <input className="col-md-9 rounded-left border-0" type="number" min="1"
                     onChange={e => setId(e.target.value)}
                     value={id} />
                 {/* **** Button to ubmit the Form ******** */}
-                <button className='col-md-3 bg-primary rounded-right btn'>Query SW API</button>
+                <button className='col-md-3 bg-warning rounded-right btn'><strong>Query SW API</strong></button>
             </form>
         </div>
     );
