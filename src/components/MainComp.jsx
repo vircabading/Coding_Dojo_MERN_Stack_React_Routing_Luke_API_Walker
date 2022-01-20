@@ -9,8 +9,11 @@ import InputComp from './InputComp';
 
 /**
  * //// MAIN COMPONENT //////////////////////////////////////
+ * @returns HTML Which will have an Input Component and Routes to 
+ *          navigte between Show Person, Show Planet, Home, and Error Components
  */
 const Main = () => {
+    // //// OUTPUT //////////////////////////////////////////
     return (
         <main role="main">
             <div className='container mt-4'>

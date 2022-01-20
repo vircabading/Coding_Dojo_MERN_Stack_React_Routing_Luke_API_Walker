@@ -5,14 +5,17 @@ import NavBar from './components/NavBarComp';
 import Main from './components/MainComp'
 
 /**
- * //// Root Application ///////////////////////////////////////////////////////////
+ * //// Root Application /////////////////////////////////////////
  * @returns HTML for the Root Application
  */
 const App = () => {
+  // //// OUTPUT /////////////////////////////////////////////////
   return (
     <BrowserRouter>
+      {/* **** NAVIGATION BAR ********* */}
       <NavBar />
       <Switch >
+        {/* **** MAIN COMPONENT ********** */}
         <Main />
       </Switch>
     </BrowserRouter>
