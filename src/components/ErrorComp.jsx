@@ -8,7 +8,7 @@ const Error = () => {
     // //// OUTPUT /////////////////////////////////////////////
     return (
         <div>
-            {/* **** Image of Obi-Wan Kenobi ******** */}
+            {/* **** Error Image of Obi-Wan Kenobi ******** */}
             <img src='https://c.tenor.com/zZl0SFFuq7EAAAAC/kenobi-not-the-droids.gif' 
                     width="90%" 
                     alt="Obi-Wan These arent the droids you're looking for">

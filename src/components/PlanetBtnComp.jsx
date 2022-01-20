@@ -13,7 +13,9 @@ const PlanetBtn = (props) => {
     const history = useHistory();
     console.log("Props searchField: ", JSON.stringify(props.searchField))
     
-
+    /**
+     * //// GET PLANET FROM SW API ///////////////////////////////////////////////
+     */
     useEffect(() => {
         axios.get(searchField)
             .then(response => {
