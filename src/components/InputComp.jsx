@@ -30,7 +30,7 @@ const InputComp = () => {
                 <input className="col-md-9 rounded-left border-0" type="text"
                     onChange={e => setId(e.target.value)}
                     value={id} />
-                <button className='col-md-3 bg-primary rounded-right btn'>Add Item</button>
+                <button className='col-md-3 bg-primary rounded-right btn'>Query SW API</button>
             </form>
         </div>
     );
