@@ -36,9 +36,11 @@ const ShowPlanet = () => {
     // //// OUTPUT //////////////////////////////////////////////////////////////
     return (
         <div >
-            <h1>{ planet.name }</h1>
+            {/* **** Planet Header ******************************************* */}
+            <h1>{ planet.name } 🌌</h1>
             {/* <p>Planet Object: { JSON.stringify(planet) }</p> */}
             <hr></hr>
+            {/* **** Planet Information ************************************** */}
             <p>Climate: { planet.climate }</p>
             <p>Terrain: { planet.terrain }</p>
             <p>Surface Water: { planet.surface_water }</p>
