@@ -17,7 +17,7 @@ const ShowPerson = () => {
     useEffect(() => {
         axios.get('https://swapi.dev/api/people/' + id)
             .then(response => {
-                console.log("Response data:", JSON.stringify(response.data));
+                console.log("Response Person data:", JSON.stringify(response.data));
                 setperson(response.data);
                 axios.get(response.data.homeworld)
                     .then(response => {
@@ -32,13 +32,14 @@ const ShowPerson = () => {
                 console.log("ERROR FOUND")
                 history.push("/error");
             });
-    }, []);
+    }, [id]);
 
     // //// OUTPUT ///////////////////////////////////////////////////////////////
     return (
         <div >
             <h1>{person.name}</h1>
-            <p>Person: {JSON.stringify(person)}</p>
+            {/* <p>id: { id }</p>
+            <p>Person: {JSON.stringify(person)}</p> */}
             <hr></hr>
             <p>Height: {person.height}</p>
             <p>Mass: {person.mass}</p>

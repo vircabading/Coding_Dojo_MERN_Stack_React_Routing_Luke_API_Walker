@@ -5,6 +5,7 @@ import Home from './HomeComp';
 import ShowPerson from './ShowPersonComp';
 import ShowPlanet from './ShowPlanetComp';
 import Error from './ErrorComp';
+import InputComp from './InputComp';
 
 /**
  * //// MAIN COMPONENT //////////////////////////////////////
@@ -15,6 +16,8 @@ const Main = () => {
             <div className='container mt-4'>
                 <div className='row bg-dark p-3 rounded'>
                     <div className="col">
+                        {/* **** INPUT FORM ************** */}
+                        <InputComp />
                         {/* **** SHOW PERSON ************* */}
                         <Route path="/person/:id">
                             <ShowPerson />

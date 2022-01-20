@@ -25,13 +25,13 @@ const ShowPlanet = () => {
             }
 
             );
-    } ,[]);
+    } ,[id]);
 
     // //// OUTPUT ///////////////////////////////////////////////////////////////
     return (
         <div >
             <h1>{ planet.name }</h1>
-            <p>Planet: { JSON.stringify(planet) }</p>
+            {/* <p>Planet: { JSON.stringify(planet) }</p> */}
             <hr></hr>
             <p>Climate: { planet.climate }</p>
             <p>Terrain: { planet.terrain }</p>
