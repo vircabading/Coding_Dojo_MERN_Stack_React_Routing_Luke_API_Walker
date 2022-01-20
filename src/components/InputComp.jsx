@@ -14,7 +14,7 @@ const InputComp = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("ID:", id)
-        history.push("/person/" + id);
+        history.push("/" + category + "/" + id);
         setCategory("person")
         setId("1");
     }
@@ -23,6 +23,10 @@ const InputComp = () => {
         <div>
             <h1>Input Component</h1>
             <form className="row p-3" onSubmit={e => handleSubmit(e)}>
+                <select value={category} onChange={e => setCategory(e.target.value)}>
+                    <option key="1" value="person">Person</option>
+                    <option key="2" value="planet">Planet</option>
+                </select>
                 <input className="col-md-9 rounded-left border-0" type="text"
                     onChange={e => setId(e.target.value)}
                     value={id} />
